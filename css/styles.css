@@ -1,0 +1,8 @@
+body {
+    background-color: #ddd;
+}
+
+#player {
+    background-color: darkblue;
+    position: absolute;
+}
