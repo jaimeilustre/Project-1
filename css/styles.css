@@ -7,21 +7,23 @@ body {
 }
 
 #track {
-    width: 100vw;
-    height: 100vh;
+    width:1550px;
+    height: 950px;
     background-image: url(../images/road-top-view-cartoon-asphalt-street-way_543062-3276.jpg);
     background-repeat: repeat-x;
     background-size: cover;
-    background-position: 50% 50%;
     animation: roadmove 3s infinite linear;
 }
 
 @keyframes roadmove {
-    0% {background-position: 100vw 0}
+    0% {background-position: 1550px 0}
     100% {background-position: 0 0}
 }
 
 #opponent1 {
+    width: 250px;
+    height: 100px;
+    z-index: 1001;
     position: absolute;
     animation-name: opponent1move;
     animation-duration: 6s;
@@ -31,11 +33,33 @@ body {
 }
 
 @keyframes opponent1move {
-    0% {top: 0vh}
-    100% {top: 80vh}
+    0% {top: 100px}
+    100% {top: 800px}
 }
+
 
 .obstacle {
     background-color: black;
-    position: relative
+    position: absolute;
 }
+
+
+/*
+#opponent2 {
+    height: 150px;
+    width: 260px;
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    animation-name: opponent2move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes opponent2move {
+    0% {right: -30vw;}
+    100% {right: 100vw}
+}
+*/
