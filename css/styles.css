@@ -31,6 +31,11 @@ body {
 }
 
 @keyframes opponent1move {
-    0% {left: 0vw}
-    100% {left: 85vw}
+    0% {top: 0vh}
+    100% {top: 80vh}
+}
+
+.obstacle {
+    background-color: black;
+    position: relative
 }
