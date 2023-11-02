@@ -1,23 +1,33 @@
 body {
-    background-color: grey;
+    background-image: url(../images/background.jpg);
+    text-align: center;
+    color: white;
+    font-family: fantasy;
+    font-size: 2rem;
 }
+
 
 #player {
     position: absolute;
 }
 
 #track {
-    width:1550px;
-    height: 950px;
+    width: 1366px;;
+    height: 768px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: url(../images/road-top-view-cartoon-asphalt-street-way_543062-3276.jpg);
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
     animation: roadmove 3s infinite linear;
+    border-radius: 10px;
+    border-style: groove;
+    border-width: 10px;
 }
 
 @keyframes roadmove {
-    0% {background-position: 1550px 0}
+    0% {background-position: 1366px 0}
     100% {background-position: 0 0}
 }
 
@@ -37,4 +47,23 @@ body {
     background-size: cover;
 }
 
+.play-again-button {
+    background-color: transparent;
+    color: red;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: red;
+}
+
+.play-button {
+    background-color: transparent;
+    color: red;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: red;
+}
 

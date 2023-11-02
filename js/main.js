@@ -1,13 +1,15 @@
+
+
 // Creating class Player
 class Player {
-    constructor(bulletController) {
+    constructor() {
         // Setting default starting position
-        this.positionX = 50; 
+        this.positionX = 350; 
         this.positionY = 475;
 
         // Setting player dimensions
-        this.height = 130;
-        this.width = 200;
+        this.height = 120;
+        this.width = 170;
 
         // Dom manipulation
         this.playerElm = document.getElementById("player");
@@ -28,24 +30,24 @@ class Player {
         }
     }
     moveDown() {
-        if(this.positionY < 150) {
-            this.positionY = 150
+        if(this.positionY < 280) {
+            this.positionY = 280
         } else {
             this.positionY -= 50;
             this.playerElm.style.bottom = this.positionY + "px";
         }
     }
     moveLeft() {
-        if (this.positionX < 50) {
-            this.positionX = 50
+        if (this.positionX < 350) {
+            this.positionX = 350
         } else {
             this.positionX -= 50;
             this.playerElm.style.left = this.positionX + "px";
         }
     }
     moveRight() {
-        if (this.positionX > 1300) {
-            this.positionX = 1300
+        if (this.positionX > 1400) {
+            this.positionX = 1400 
         } else {
             this.positionX += 50;
             this.playerElm.style.left = this.positionX + "px";
@@ -76,13 +78,12 @@ const player = new Player();
 
 
 // Creating new class for obstacles
-
 class Obstacle {
     constructor() {
-        this.width = 170;
-        this.height = 100;
-        this.positionX = 1360;
-        this.positionY = Math.random() * (680 - 150) + 150
+        this.width = 150;
+        this.height = 90;
+        this.positionX = 1400;
+        this.positionY = Math.random() * (680 - 280) + 280
         this.obstacleElm = null;
 
         this.createDomElement()
@@ -117,8 +118,9 @@ setInterval(() => {
 setInterval (() => {
     obstaclesArr.forEach((obstacleInstance) => {
         obstacleInstance.moveLeft();
-        if (obstacleInstance.positionX < 0 - obstacleInstance.width) {
+        if (obstacleInstance.positionX < 400 - obstacleInstance.width) {
             obstacleInstance.obstacleElm.remove()
+            location.href = "./gameover.html"
         }
         if (
             player.positionX < obstacleInstance.positionX + obstacleInstance.width &&
@@ -158,8 +160,12 @@ class Bullet {
         this.bulletElm.style.left = this.positionX + 'px'
     }
 }
-
+// Creating a scoreboard
 let score = 0
+
+
+// Creating bullets 
+
 const bulletArr = []
 
 setInterval(() => {
@@ -170,7 +176,7 @@ setInterval(() => {
 setInterval(() => {
     bulletArr.forEach((bulletInstance, bullet) => {
         bulletInstance.moveRight();
-        if(bulletInstance.positionX > 1599 - bulletInstance.width) {
+        if(bulletInstance.positionX > 1600 - bulletInstance.width) {
             bulletInstance.bulletElm.remove()
             bulletArr.splice(bullet, 1)
         }
