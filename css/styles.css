@@ -16,7 +16,7 @@ body {
     height: 768px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../images/road-top-view-cartoon-asphalt-street-way_543062-3276.jpg);
+    background-image: url(../images/road.jpg);
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
@@ -67,3 +67,15 @@ body {
     border-color: red;
 }
 
+#title {
+    height: 100px;
+}
+
+.description {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.headings {
+    height: 75px;
+}
