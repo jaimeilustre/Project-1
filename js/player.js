@@ -3,7 +3,7 @@
 class Player {
     constructor() {
         // Setting default starting position
-        this.positionX = 350; 
+        this.positionX = 350;
         this.positionY = 475;
 
         // Setting player dimensions
@@ -14,9 +14,9 @@ class Player {
         this.playerElm = document.getElementById("player");
         this.playerElm.style.width = this.width + "px";
         this.playerElm.style.height = this.height + "px";
-        this.playerElm.style.left= this.positionX + "px";
+        this.playerElm.style.left = this.positionX + "px";
         this.playerElm.style.bottom = this.positionY + "px";
-            
+
     }
     moveUp() {
         if (this.positionY > 680) {
@@ -27,7 +27,7 @@ class Player {
         }
     }
     moveDown() {
-        if(this.positionY < 280) {
+        if (this.positionY < 280) {
             this.positionY = 280
         } else {
             this.positionY -= 50;
@@ -44,7 +44,7 @@ class Player {
     }
     moveRight() {
         if (this.positionX > 1400) {
-            this.positionX = 1400 
+            this.positionX = 1400
         } else {
             this.positionX += 50;
             this.playerElm.style.left = this.positionX + "px";

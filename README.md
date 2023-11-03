@@ -13,3 +13,7 @@ Drive your Formula 1 car and throw that piece of wood to EVERY FIA car you see!!
 ## Controls
 
 Use arrow keys.
+
+## Demo link
+
+https://jaimeilustre.github.io/Project-1/

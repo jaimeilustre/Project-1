@@ -32,12 +32,12 @@ const bulletArr = []
 setInterval(() => {
     const newBullet = new Bullet(player.positionX, player.positionY)
     bulletArr.push(newBullet)
-}, 750) 
+}, 750)
 
 setInterval(() => {
     bulletArr.forEach((bulletInstance, bullet) => {
         bulletInstance.moveRight();
-        if(bulletInstance.positionX > 1600 - bulletInstance.width) {
+        if (bulletInstance.positionX > 1600 - bulletInstance.width) {
             bulletInstance.bulletElm.remove()
             bulletArr.splice(bullet, 1)
         }
@@ -56,7 +56,7 @@ setInterval(() => {
             }
             scoreboard()
         })
-        
+
     })
 }, 50)
 
@@ -67,4 +67,4 @@ let score = 0
 const scoreboard = () => {
     const finalScore = document.querySelector('#points');
     finalScore.textContent = score
-  }
+}

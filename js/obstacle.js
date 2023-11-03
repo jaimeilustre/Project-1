@@ -1,4 +1,5 @@
 // Creating new class for obstacles
+
 class Obstacle {
     constructor() {
         this.width = 150;
